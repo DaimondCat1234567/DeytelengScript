@@ -1,9 +1,6 @@
 // код DeytelengScript/code DeytelengScript
 const url = new URL(window.location)
 const searchParams = url.searchParams
-if (searchParams.get('lang')) {
-  searchParams.append('lang', 'English')
-}
 docData = {}
 docData.input = document.getElementById('input')
 docData.output = document.getElementById('output')
@@ -25,6 +22,9 @@ if (!theme) {
   localStorage.setItem('theme', theme)
 }
 apps = localStorage.getItem('apps')
+if (!apps) {
+  localStorage.setItem('apps', [])
+}
 app = {}
 themes = {
   "light": 1,
