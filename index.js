@@ -5,6 +5,7 @@ docData.css = document.getElementById('css')
 docData.theme = document.getElementById('theme')
 docData.console = document.getElementById('console')
 docData.sendConsole = document.getElementById('sendConsole')
+docData.ProjectName = document.getElementById('sendConsole')
 docData.input.value = ''
 docData.output.innerHTML = "<p>It's empty!</p>"
 docData.console.innerHTML = "<p>It's empty!</p>"
@@ -32,6 +33,7 @@ function updateTheme(th) {
   docData.css.href = themeStyle[th]
   docData.theme.src = themeIcon[th]
 }
+updateTheme(theme)
 function newTheme() {
   if (theme === 'light') {
     theme = 'dark'
