@@ -9,10 +9,10 @@ docData.sendConsole = document.getElementById('sendConsole')
 docData.ProjectName = document.getElementById('ProjectName')
 docData.input.value = ''
 docData.output.innerHTML = "<p>It's empty!</p>"
-docData.console.innerHTML = "<p>It's empty!</p>"
+docData.console.innerHTML = "<p>Site started!</p>"
 docData.sendConsole.value = ''
 docData.ProjectName.value = ''
-consoleLang = ""
+consoleLang = "<p>Site started!</p>"
 theme = localStorage.getItem('theme')
 if (!theme) {
   theme = 'light'
