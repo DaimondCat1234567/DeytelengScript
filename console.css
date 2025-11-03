@@ -1,0 +1,8 @@
+.ConsoleError {
+  font-family: "Noto Sans", sans-serif;
+  color: #ff0000af;
+} 
+.ConsoleWarn {
+  font-family: "Noto Sans", sans-serif;
+  color: #ffa800af;
+}
