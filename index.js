@@ -1,3 +1,4 @@
+// код DeytelengScript/code DeytelengScript
 docData = {}
 docData.input = document.getElementById('input')
 docData.output = document.getElementById('output')
@@ -48,6 +49,18 @@ function newTheme() {
 function SentToConsole() {
   docData.console.innerHTML = `${docData.console}<p>your: ${docData.sendConsole.value}</p>`
 }
+function GetTypes(znach)
 function Run() {
   code = docData.input.value
+  RunnerDeytelengScript = {}
+  RunnerDeytelengScript.i = 0
+  RunnerDeytelengScript.i2 = 'true'
+  while (RunnerDeytelengScript.i2) {
+    if (RunnerDeytelengScript.i > code.length) {
+      RunnerDeytelengScript.i2 = 'false'
+    } else {
+      RunnerDeytelengScript.i2 = 'true'
+    }
+    RunnerDeytelengScript.i = RunnerDeytelengScript.i + 1
+  }
 }
