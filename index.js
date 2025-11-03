@@ -9,12 +9,14 @@ docData.theme = document.getElementById('theme')
 docData.console = document.getElementById('console')
 docData.sendConsole = document.getElementById('sendConsole')
 docData.ProjectName = document.getElementById('ProjectName')
-docData.Lang = document.getElementById('Language')
+docData.Lang = document.getElementById('lang')
+docData.pocket = document.getElementById('pocket')
 docData.input.value = ''
 docData.output.innerHTML = "<p>It's empty!</p>"
 docData.console.innerHTML = "<p>Site started!</p>"
 docData.sendConsole.value = ''
 docData.ProjectName.value = ''
+docData.pocket.value = ''
 consoleLang = "<p>Site started!</p>"
 theme = localStorage.getItem('theme')
 if (!theme) {
@@ -22,8 +24,12 @@ if (!theme) {
   localStorage.setItem('theme', theme)
 }
 apps = localStorage.getItem('apps')
+apps2 = localStorage.getItem('apps2')
 if (!apps) {
   localStorage.setItem('apps', [])
+  localStorage.setItem('apps2', {})
+  apps = localStorage.getItem('apps')
+  apps2 = localStorage.getItem('apps2')
 }
 app = {}
 themes = {
@@ -56,6 +62,15 @@ function SendToConsole() {
   docData.console.innerHTML = `${consoleLang}<p>your: ${docData.sendConsole.value}</p>`
   consoleLang = `${consoleLang}<p>your: ${docData.sendConsole.value}</p>`
 }
+function ImportCode() {
+  if (!apps.includes(docData.pocket.value)) {
+    apps.push(docData.pocket.value)
+  }
+  apps2[docData.pocket.value] = docData.input.value
+  localStorage.setItem('apps', apps)
+  localStorage.setItem('apps2', app2)
+}
+function ExportCode() {}
 function GetTypes(znach) {
   TypesGet.i = znach.type
   TypesGet.i2 = znach.value
